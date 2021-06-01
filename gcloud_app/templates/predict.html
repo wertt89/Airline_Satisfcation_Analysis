@@ -1,6 +1,18 @@
+{% extends "base.html" %}
+
+{% set active_page = "predict" %}
+
+{% block content %}
+
 <!doctype html>
 <html>
    <body>
-       <h1> {{ prediction }}</h1>
+           {% if prediction == "1" %}
+           <h1>Satisfied</h1>
+           {% else %}
+           <h1>Unsatisfied</h1>
+           {% endif %}
    </body>
 </html>
+
+{% endblock %}

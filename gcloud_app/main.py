@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import pickle
 from flask import Flask, render_template, request
-import joblib
 import requests
 
 app = Flask(__name__)
@@ -31,7 +30,7 @@ def ValuePredictor(to_predict_list):
     return result[0]
 
 @app.route('/')
-@app.route('/home')
+@app.route('/home', methods=['POST'])
 def home():
     return render_template('home.html')
 
@@ -49,9 +48,6 @@ def predict():
         to_predict_list_dict = request.form.to_dict()
         to_predict_list_values = list(to_predict_list_dict.values())
         to_predict_list_float = list(map(float, to_predict_list_values))
-        print(to_predict_list_dict)
-        print(to_predict_list_values)
-        print(to_predict_list_float)
         result = ValuePredictor(to_predict_list_float)
         prediction = str(result)
         return render_template("predict.html", prediction=prediction)

@@ -60,36 +60,28 @@
     <label for="arrival_delay">Arrival Delay (min)</label>
     <input type="number" step="1" id="arrival_delay" name="arrival_delay">
     <br>
-    <label for="gender_female">Female</label>
+    <label for="gender">Gender</label>
     <input type="number" step="1" id="gender_female" name="gender_female">
     <br>
-    <label for="gender_male">Male</label>
-    <input type="number" step="1" id="gender_male" name="gender_male">
-    <br>
-    <label for="loyal_customer">Loyal Customer</label>
+    <label for="customer_type">Customer Type</label>
     <input type="number" step="1" id="loyal_customer" name="loyal_customer">
     <br>
-    <label for="disloyal_customer">Disloyal Customer</label>
-    <input type="number" step="1" id="disloyal_customer" name="disloyal_customer">
-    <br>
-    <label for="business_travel">Business Travel</label>
+    <label for="travel_type">Travel Type</label>
     <input type="number" step="1" id="business_travel" name="business_travel">
     <br>
-    <label for="personal_travel">Personal Travel</label>
-    <input type="number" step="1" id="personal_travel" name="personal_travel">
-    <br>
-    <label for="class_business">Business Class</label>
+    <label for="class">Class</label>
     <input type="number" step="1" id="class_business" name="class_business">
-    <br>
-    <label for="class_eco">Economy Class</label>
-    <input type="number" step="1" id="class_eco" name="class_eco">
-    <br>
-    <label for="class_ecoplus">Economy Class Plus</label>
-    <input type="number" step="1" id="class_ecoplus" name="class_ecoplus">
     <br>
     <input type="submit" value="Submit">
   </form>
 
+  <form id="satisfaction_output" method="POST">
+    <input type="submit" onclick="home()" value="Get Satisfaction">
+    
+    <div id="display" style="height: 50px; width: 100%;"></div>
+
+    <p>{{prediction}}</p>
+    
 
 
 
