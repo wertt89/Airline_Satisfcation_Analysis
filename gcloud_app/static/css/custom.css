@@ -14,10 +14,14 @@ p {
   font-size: 1.2em;
 }
 
+.row {
+  margin:0%;
+}
 
 .starter-template {
   padding: 3rem 1.5rem;
   text-align: center;
+  background-color:darkgray;
 }
 
 .form-group {

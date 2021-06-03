@@ -6,17 +6,20 @@
   <h1>Flight Passenger Satisfaction Analysis</h1>
   <p class="lead">Fill out the survey below to help determine if passengers will be satisfied with thier flight</p>
   
-  <form action="/predict" method="POST">
-    <div class= "col-md-12">
-
-      <label for="age">Age: </label>
+  <form action="/predict" method="POST" class="row g-3">
+    
+    <div class= "col-md-6">
+      <label for="age" class="col-form-label">Age: </label>
       <input type="number" step="1" id="age" name="age">
+    </div>
 
-      <label for="flight_distance">Flight Distance: </label>
+    <div class= "col-md-6">
+      <label for="flight_distance" class="col-form-label">Flight Distance: </label>
       <input type="number" step="100" id="flight_distance" name="flight_distance">
-      <br>
+    </div>
 
-      <label for="wifi">Inflight wifi service: </label>
+    <div class= "col-md-6">
+      <label for="wifi" class="col-form-label">Inflight wifi service: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="wifi" id="inlineRadio1" value="1">
           <label class="form-check-label" for="inlineRadio1">1</label>
@@ -38,9 +41,10 @@
           <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
       <!-- <input type="number" step="1" id="wifi" name="wifi"> -->
-      <br>
+     </div>
 
-      <label for="time_convenient">Departure/Arrival Time Convenient: </label>
+     <div class= "col-md-6">
+      <label for="time_convenient" class="col-form-label">Departure/Arrival Time Convenient: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="time_convenient" id="inlineRadio1" value="1">
           <label class="form-check-label" for="inlineRadio1">1</label>
@@ -62,9 +66,10 @@
           <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
       <!-- <input type="number" step="1" id="time_convenient" name="time_convenient"> -->
-      <br>
+     </div>
 
-      <label for="online_booking">Online Booking: </label>
+     <div class= "col-md-6">
+      <label for="online_booking" class="col-form-label">Online Booking: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="online_booking" id="inlineRadio1" value="1">
           <label class="form-check-label" for="inlineRadio1">1</label>
@@ -86,9 +91,10 @@
           <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
       <!-- <input type="number" step="1" id="online_booking" name="online_booking"> -->
-      <br>
+     </div>
 
-      <label for="gate_location">Gate Location: </label>
+     <div class= "col-md-6">
+      <label for="gate_location" class="col-form-label">Gate Location: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="gate_location" id="inlineRadio1" value="1">
           <label class="form-check-label" for="inlineRadio1">1</label>
@@ -110,8 +116,9 @@
           <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
       <!-- <input type="number" step="1" id="gate_location" name="gate_location"> -->
-      <br>
+     </div>
 
+     <div class= "col-md-6">
       <label for="food_drink">Food and Drink: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="food_drink" id="inlineRadio1" value="1">
@@ -134,8 +141,9 @@
           <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
       <!-- <input type="number" step="1" id="food_drink" name="food_drink"> -->
-      <br>
+     </div>
 
+     <div class= "col-md-6">
       <label for="online_boarding">Online Boarding: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="online_boarding" id="inlineRadio1" value="1">
@@ -158,8 +166,9 @@
           <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
       <!-- <input type="number" step="1" id="online_boarding" name="online_boarding"> -->
-      <br>
+     </div>
 
+     <div class= "col-md-6">
       <label for="seat_comfort">Seat Comfort: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="seat_comfort" id="inlineRadio1" value="1">
@@ -182,8 +191,9 @@
           <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
       <!-- <input type="number" step="1" id="seat_comfort" name="seat_comfort"> -->
-      <br>
+     </div>
 
+     <div class= "col-md-6">
       <label for="inflight_entertainment">Inflight Entertainment: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="inflight_entertainment" id="inlineRadio1" value="1">
@@ -206,8 +216,9 @@
           <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
       <!-- <input type="number" step="1" id="inflight_entertainment" name="inflight_entertainment"> -->
-      <br>
+     </div>
 
+     <div class= "col-md-6">
       <label for="on-board_service">On-Board Service: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="board_service" id="inlineRadio1" value="1">
@@ -230,8 +241,9 @@
           <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
       <!-- <input type="number" step="1" id="on-board_service" name="on-board_service"> -->
-      <br>
+     </div>
 
+     <div class= "col-md-6">
       <label for="leg_room">Leg Room: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="leg_room" id="inlineRadio1" value="1">
@@ -254,8 +266,9 @@
           <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
       <!-- <input type="number" step="1" id="leg_room" name="leg_room"> -->
-      <br>
+     </div>
 
+     <div class= "col-md-6">
       <label for="baggage_handling">Baggage Handling: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="baggage_handling" id="inlineRadio1" value="1">
@@ -278,8 +291,9 @@
           <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
       <!-- <input type="number" step="1" id="baggage_handling" name="baggage_handling"> -->
-      <br>
+     </div>
 
+     <div class= "col-md-6">
       <label for="checkin_service">Checkin Service: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="checkin_service" id="inlineRadio1" value="1">
@@ -302,8 +316,9 @@
           <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
       <!-- <input type="number" step="1" id="checkin_service" name="checkin_service"> -->
-      <br>
+     </div>
 
+     <div class= "col-md-6">
       <label for="inflight_service">Inflight Service: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="inflight_service" id="inlineRadio1" value="1">
@@ -327,8 +342,9 @@
         </div>
       <!-- 
         <input type="number" step="1" id="inflight_service" name="inflight_service"> -->
-      <br>
+     </div>
 
+     <div class= "col-md-6">
       <label for="cleanliness">Cleanliness: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="cleanliness" id="inlineRadio1" value="1">
@@ -351,15 +367,19 @@
           <label class="form-check-label" for="inlineRadio5">5</label>
         </div>
       <!-- <input type="number" step="1" id="cleanliness" name="cleanliness"> -->
-      <br>
+     </div>
 
+     <div class= "col-md-6">
       <label for="departure_delay">Departure Delay (min): </label>
         <input type="number" step="1" id="departure_delay" name="departure_delay">
+     </div>
       
+     <div class= "col-md-6">
       <label for="arrival_delay">Arrival Delay (min): </label>
         <input type="number" step="1" id="arrival_delay" name="arrival_delay">
-      <br>
+     </div>
 
+     <div class= "col-md-6">
       <label for="gender">Gender: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="gender" id="Female" value="0">
@@ -370,8 +390,9 @@
           <label class="form-check-label" for="Male">Male</label>
         </div>
       <!-- <input type="number" step="1" id="gender_female" name="gender_female"> -->
-      <br>
+     </div>
 
+     <div class= "col-md-6">
       <label for="customer_type">Customer Type: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="customer_type" id="Loyal_Customer" value="1">
@@ -382,8 +403,9 @@
           <label class="form-check-label" for="Disloyal_Customer">Disloyal Customer</label>
         </div>
       <!-- <input type="number" step="1" id="loyal_customer" name="loyal_customer"> -->
-      <br>
+     </div>
 
+     <div class= "col-md-6">
       <label for="travel_type">Travel Type: </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="travel_type" id="Personal" value="0">
@@ -394,8 +416,9 @@
           <label class="form-check-label" for="Business">Business</label>
         </div>
       <!-- <input type="number" step="1" id="business_travel" name="business_travel"> -->
-      <br>
+     </div>
 
+     <div class= "col-md-6">
       <label for="class">Class: </label>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="class" id="Economy_Plus" value="0">
@@ -410,7 +433,7 @@
         <label class="form-check-label" for="Business">Business</label>
       </div>
       <!-- <input type="number" step="1" id="class_business" name="class_business"> -->
-      <br>
+     </div>
 
 
       <input type="submit" value="Submit">
@@ -418,11 +441,10 @@
   </form>
 
     <p>{{prediction}}</p>
-    
-
-
 
 
 </div>
 
 {% endblock %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='css/custom.css')}}" />
