@@ -47,7 +47,6 @@ def predict():
     if request.method == "POST":
         to_predict_list_dict = request.form.to_dict()
         to_predict_list_values = list(to_predict_list_dict.values())
-        print(to_predict_list_values)
         to_predict_list_float = list(map(float, to_predict_list_values))
         result = ValuePredictor(to_predict_list_float)
         prediction = str(result)
