@@ -7,6 +7,7 @@ import requests
 
 app = Flask(__name__)
 
+
 #check if file is already on disk, and if it is not, download from amazon S3
 # loaded_model = pickle.load(open("random_forest.pkl", 'rb'))
 
@@ -66,6 +67,4 @@ def page_not_found(error):
 
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
 
