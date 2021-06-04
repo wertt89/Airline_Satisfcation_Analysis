@@ -5,6 +5,23 @@ import pickle
 from flask import Flask, render_template, request
 import requests
 
+# UPLOAD_FOLDER = '../images/'
+# ALLOWED_EXTENSIONS = {'png'}
+
+# app = Flask(__name__)
+# app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+# @app.route("/", methods=['GET', 'POST'])
+# def index():
+#     def upload_file():
+#         if request.method == 'POST':
+#             if 'file1' not in request.files:
+#                 return 'there is no file1 in form!'
+#             file1 = request.files['file1']
+#             path = os.path.join(app.config['UPLOAD_FOLDER'], file1.filename)
+#             file1.save(path)
+#             return path
+
 app = Flask(__name__)
 
 #check if file is already on disk, and if it is not, download from amazon S3
@@ -51,6 +68,10 @@ def predict():
         result = ValuePredictor(to_predict_list_float)
         prediction = str(result)
         return render_template("predict.html", prediction=prediction)
+
+@app.route('/metrics')
+def metrics():
+    return render_template('metrics.html')
 
 @app.route('/analysis')
 def analysis():
