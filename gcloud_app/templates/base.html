@@ -22,8 +22,8 @@
   </head>
 
   <!-- Jinja2 stuff related to generating nav and setting active state. Add more pages here! -->
-  {% set navigation_bar = [('/', 'home', 'Home'), ('/dashboard', 'dashboard', 'Dashboard'), 
-                            ('/analysis', 'analysis', 'Analysis'), ('/about', 'about', 'About')] -%}
+  {% set navigation_bar = [('/', 'home', 'Home'), ('/dashboard', 'dashboard', 'Dashboard'), ('/analysis', 'analysis', 'Analysis'),
+                            ('/metrics', 'metrics', 'Metrics'), ('/about', 'about', 'About')] -%}
 
   {% set active_page = active_page|default('home') -%}
 
