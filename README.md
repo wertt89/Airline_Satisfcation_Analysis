@@ -9,5 +9,8 @@ We retrieved the dataset from Kaggle. The data consists of a training dataset (d
 ## Machine Learning Model Testing
 In training and testing our machine learning model, we experimented with 3 different algorithms – logistic regression, classic decision tree, and random forest. For our final application, we employed a random forest model, as this algorithm produced the best model score, and we utilized the “feature importance” functionality for random forest models in the Sci-kit Learn Python library to quantify which of the survey inputs were most impactful on customer satisfaction.
 
+## Deployment
+We deployed the model as a web application at the following address: https://airline-satisfaction.herokuapp.com/.
+
 ## Conclusion
-We deployed the model as a web-application at the following address: https://airline-satisfaction.herokuapp.com/. The utility of the application is for stakeholders, whether that be airlines, airline investors, airline travelers, etc. to test the application to determine what factors of the flight experience should be optimized to produce customer satisfaction. On the web application, we also included graphs and analyses to support our conclusions from the data analysis. 
+The utility of the application is for stakeholders, whether that be airlines, airline investors, airline travelers, etc. to test the application to determine what factors of the flight experience should be optimized to produce customer satisfaction. On the web application, we also included graphs and analyses to support our conclusions from the data analysis. 
